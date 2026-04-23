@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="500" viewBox="0 0 1600 500">
+  <rect width="100%" height="100%" fill="white"/>
+  <g transform="translate(120,110)">
+    <rect x="0" y="180" width="70" height="90" rx="8" fill="#0F2D5C"/>
+    <rect x="100" y="120" width="70" height="150" rx="8" fill="#0F2D5C"/>
+    <rect x="200" y="40" width="70" height="230" rx="8" fill="#4CAF50"/>
+    <path d="M-10 130 C60 105, 115 70, 180 20 C215 -5, 245 -25, 300 -55" fill="none" stroke="#4CAF50" stroke-width="16" stroke-linecap="round"/>
+    <path d="M285 -72 L320 -55 L290 -25" fill="none" stroke="#4CAF50" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="520" y="310" font-family="Arial, Helvetica, sans-serif" font-size="120" font-weight="500">
+    <tspan fill="#0F2D5C">Conta</tspan><tspan fill="#4CAF50">Net</tspan>
+  </text>
+</svg>

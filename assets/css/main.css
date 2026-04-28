@@ -2872,3 +2872,76 @@ box-sizing: border-box;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+
+.contact-form-modern {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border: 1px solid #f0f0f0;
+}
+
+/* Inputs generales */
+.contact-form-modern .form-control {
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+  padding: 12px 14px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  background: #fafafa;
+}
+
+/* Focus elegante */
+.contact-form-modern .form-control:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74,144,226,0.15);
+  background: #fff;
+}
+
+/* Textarea */
+.contact-form-modern textarea.form-control {
+  resize: none;
+}
+
+/* Botón */
+.contact-form-modern button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.contact-form-modern button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(53,122,189,0.3);
+}
+
+/* Espaciado interno */
+.contact-form-modern .row > div {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .contact-form-modern {
+    padding: 20px;
+    border-radius: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .contact-form-modern button[type="submit"] {
+    font-size: 15px;
+    padding: 11px;
+  }
+}
+@media (max-width: 768px) {
+  .contact-form-modern .form-control {
+    font-size: 14px;
+    padding: 11px;
+  }
+}

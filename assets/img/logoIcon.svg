@@ -1,10 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="420" height="360" viewBox="0 0 420 360">
-  <rect width="100%" height="100%" fill="none"/>
-  <g transform="translate(50,90)">
-    <rect x="0" y="140" width="70" height="90" rx="8" fill="#0F2D5C"/>
-    <rect x="100" y="80" width="70" height="150" rx="8" fill="#0F2D5C"/>
-    <rect x="200" y="0" width="70" height="230" rx="8" fill="#4CAF50"/>
-    <path d="M-10 90 C60 65, 115 30, 180 -20 C215 -45, 245 -65, 300 -95" fill="none" stroke="#4CAF50" stroke-width="16" stroke-linecap="round"/>
-    <path d="M285 -112 L320 -95 L290 -65" fill="none" stroke="#4CAF50" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -90 360 380">
+  <rect x="0" y="180" width="70" height="90" rx="8" fill="#0F2D5C"/>
+  <rect x="100" y="120" width="70" height="150" rx="8" fill="#0F2D5C"/>
+  <rect x="200" y="40" width="70" height="230" rx="8" fill="#4CAF50"/>
+  <path
+    d="M-10 130 C60 105, 115 70, 180 20 C215 -5, 245 -25, 300 -55"
+    fill="none"
+    stroke="#4CAF50"
+    stroke-width="16"
+    stroke-linecap="round"
+  />
+  <path
+    d="M285 -72 L320 -55 L290 -25"
+    fill="none"
+    stroke="#4CAF50"
+    stroke-width="16"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
 </svg>

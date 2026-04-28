@@ -52,13 +52,16 @@
 } 
 
 .nota-plan {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: #6c757d;
-  margin-top: 12px;
-  padding-top: 8px;
-  border-top: 1px solid #e9ecef;
+  margin-top: 14px;
+  padding: 10px 12px;
+  background: #f8f9fa;
+  border-left: 4px solid #20c997;
+  border-radius: 6px;
+  line-height: 1.5;
+  text-align: left;
   font-style: italic;
-  line-height: 1.4;
 }
 
 .btn-whatsapp {
@@ -649,6 +652,13 @@ h6 {
   border-top: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
   border-bottom: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
   padding: 50px 0;
+  padding-left: 40px;
+}
+
+@media (max-width: 768px) {
+  .footer .footer-top {
+    padding: 35px 24px;
+  }
 }
 
 .footer .social-links a {

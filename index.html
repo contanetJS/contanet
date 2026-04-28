@@ -651,7 +651,7 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="https://formspree.io/f/xpqkvpza" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form id="contact-form" action="https://formspree.io/f/xpqkvpza" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -669,11 +669,8 @@
                 <div class="col-12">
                   <textarea class="form-control" name="message" rows="6" placeholder="Mensaje" required=""></textarea>
                 </div>
-                <input type="text" name="_gotcha" style="display:none">
+                
                 <div class="col-12 text-center">
-                  <div class="loading">Cargando...</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Tu e-mail ha sido enviado. Gracias!</div>
                   <button type="submit">Enviar</button>
                 </div>
 
@@ -681,10 +678,6 @@
             </form>
             <div id="success" style="display:none; color:green; margin-top:10px;">
               Mensaje enviado correctamente ✔
-            </div>
-
-            <div id="error" style="display:none; color:red; margin-top:10px;">
-              Error al enviar el mensaje ❌
             </div>
           </div><!-- End Contact Form -->
 
@@ -771,27 +764,52 @@
 
 <script>
 const form = document.getElementById("contact-form");
-const success = document.getElementById("success");
-const error = document.getElementById("error");
+const successBox = document.getElementById("success");
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
+form.addEventListener("submit", async function(e) {
+  e.preventDefault(); // 👈 evita recarga y JSON en pantalla
 
-  success.style.display = "none";
+  const loading = document.querySelector(".loading");
+  const error = document.querySelector(".error-message");
+  const sent = document.querySelector(".sent-message");
+
+  loading.style.display = "block";
   error.style.display = "none";
+  sent.style.display = "none";
 
-  const res = await fetch(form.action, {
-    method: "POST",
-    body: new FormData(form),
-    headers: {
-      "Accept": "application/json"
+  try {
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: {
+        "Accept": "application/json"
+      }
+    });
+
+    const data = await response.json();
+
+    loading.style.display = "none";
+
+    if (data.ok) {
+      sent.style.display = "block";
+
+      form.reset(); // 👈 🔥 ESTO LIMPIA EL FORMULARIO
+
+      successBox.style.display = "block";
+
+      setTimeout(() => {
+        sent.style.display = "none";
+        successBox.style.display = "none";
+      }, 4000);
+
+    } else {
+      error.innerHTML = "Error al enviar el mensaje";
+      error.style.display = "block";
     }
-  });
 
-  if (res.ok) {
-    success.style.display = "block";
-    form.reset();
-  } else {
+  } catch (err) {
+    loading.style.display = "none";
+    error.innerHTML = "Error de conexión";
     error.style.display = "block";
   }
 });

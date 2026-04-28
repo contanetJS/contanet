@@ -51,6 +51,16 @@
   color: var(--heading-color_sec);
 } 
 
+.nota-plan {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 1px solid #e9ecef;
+  font-style: italic;
+  line-height: 1.4;
+}
+
 .btn-whatsapp {
     display: inline-flex;
     align-items: center;

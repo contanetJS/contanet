@@ -78,7 +78,9 @@
             <h1 class="titulo-secundario" data-aos="fade-up">nosotros en tus números.</h1>
             <p data-aos="fade-up" data-aos-delay="100">Soluciones contables y tributarias para que tomes decisiones con confianza.</p>
             <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
-              <a href="https://wa.me/393919130536" class="btn-whatsapp">Habla con un asesor<i class="bi bi-whatsapp"></i></a>
+              <a href="#" class="btn-whatsapp" onclick="sendWhatsApp('Hola, necesito asesoria contable'); return false;">
+                Habla con un asesor<i class="bi bi-whatsapp"></i>
+              </a>
             </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
@@ -102,9 +104,9 @@
 
           <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
             <div class="content">
-              <h2>Con más de 20 años de experiencia, hemos ayudado a empresas, emprendedores y personas naturales en todo Ecuador a mantener sus finanzas en orden, cumplir con sus obligaciones y tomar decisiones con mayor seguridad.</h2>
+              <h2>Con más de 20 años de experiencia, hemos ayudado a empresas, emprendedores y personas naturales en todo el Ecuador a mantener sus finanzas en orden, cumplir con sus obligaciones y tomar decisiones con mayor seguridad.</h2>
               <p>
-                Hemos comprobado que los negocios crecen con mayor rapidez cuando sus propietarios dedican su tiempo a dirigir y desarrollar su actividad, mientras dejan en manos expertas la gestión contable y tributaria.
+                Hemos comprobado que los negocios crecen con mayor rapidez cuando sus propietarios dedican su tiempo a dirigir y desarrollar su actividad, mientras dejan en manos expertas la gestión contable y financiera.
                 Por eso, ofrecemos un servicio personalizado, eficiente y alineado con la normativa vigente, para que usted pueda enfocarse en hacer crecer su negocio con tranquilidad.
               </p>
             </div>
@@ -146,7 +148,7 @@
               <i class="bi bi-bank icon"></i>
               <h3>Servicios Tributarios</h3>
               <p>Gestión y cumplimiento oportuno de tus obligaciones fiscales ante el SRI para evitar multas y sanciones.</p>
-              <p><span class="resaltado">Incluye: </span> Declaraciones de impuestos, IVA, retenciones, impuesto a la renta y asesoría en régimen tributario.</p>
+              <p><span class="resaltado">Incluye: </span> Declaraciones de impuestos, IVA, retenciones, impuesto a la renta, impuesto a la salida de divisas, herencias y legados, anexo transaccional, anexo de relación de dependencia, anexo de declaración patrimonial, anexo de gastos personales, etc. Además de asesoría en régimen tributario.</p>
             </div>
           </div><!-- End Service Item -->
 
@@ -194,11 +196,21 @@
                 <i class="bi bi-box" style="color: #20c997;"></i>
               </div>
               <ul>
-                <li>Pensado para emprendedores que necesitan declaracione puntuales</li>
-                <li class="resaltadoVerde">Incluye:</li>
+                <li>Pensado para quienes necesitan declaracione puntuales</li>
+                <li class="resaltadoVerde">Declaraciones:</li>
                 <li>Declaración de IVA</li>
+                <li>Impuesto a la renta</li>
+                <li>Anexo de gastos personales</li>
+                <li>Proyección de gastos personales</li>
+                <li>Declaración de impuestos a la salida de divisas</li>
+                <li>Declaraciones sobre ingresos provenientes de herencias, legados, donacionnes</li>
+                <li>Declaración patrimonial</li>
+                <li>Regulaciones tributaria</li>
+                <li>Facturación electrónica (Facturador SRI)</li>
               </ul>
-              <a href="#" class="btn-buy">Solicita evaluación gratuita</a>
+              <a href="#" class="btn-buy" onclick="sendWhatsApp('Hola, necesito ayuda con una declaración'); return false;">
+                Solicita una declaración
+              </a>
             </div>
           </div><!-- End Pricing Item -->
 
@@ -219,8 +231,13 @@
                 <li>Proyección de gastos personales</li>
                 <li>Detalle de ingresos y egresos</li>
                 <li>Asesoría tributaria básica</li>
+                <li class="nota-plan">
+                  *Hasta 10 facturas de venta y 20 comprobantes de compras mensuales
+                </li>
               </ul>
-              <a href="#" class="btn-buy">Solicita evaluación gratuita</a>
+              <a href="#" class="btn-buy" onclick="sendWhatsApp('Hola, me interesa el Plan Emprendedor'); return false;">
+                Solicita evaluación gratuita
+              </a>
             </div>
           </div><!-- End Pricing Item -->
 
@@ -232,7 +249,7 @@
                 <i class="bi bi-airplane" style="color: #fd7e14;"></i>
               </div>
               <ul>
-                <li>Si eres un contribuyente con alto movimiento comercial, este plan es para ti</li>
+                <li>Perfecto para contribuyente con alto movimiento comercial</li>
                 <li class="resaltadoVerde">Incluye:</li>
                 <li>IVA mensual o semestral</li>
                 <li>Impuesto a la renta</li>
@@ -240,15 +257,20 @@
                 <li>Proyección de gastos personales</li>
                 <li>Detalle de ingresos y egresos</li>
                 <li>Asesoría tributaria y contable a medida</li>
+                <li class="nota-plan">
+                  *Hasta 20 facturas de venta y 50 comprobantes de compras mensuales
+                </li>
               </ul>
-              <a href="#" class="btn-buy">Solicita evaluación gratuita</a>
+              <a href="#" class="btn-buy" onclick="sendWhatsApp('Hola, me interesa el Plan Profesional'); return false;">
+                Solicita evaluación gratuita
+              </a>
             </div>
           </div><!-- End Pricing Item -->
 
           <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
             <div class="pricing-tem">
               <h3 style="color: #0d6efd;">Plan Empresas</h3>
-              <div class="price"><sup>$</sup>80<span> / mes</span></div>
+              <div class="price"><sup>$</sup>100<span> / mes</span></div>
               <div class="icon">
                 <i class="bi bi-rocket" style="color: #0d6efd;"></i>
               </div>
@@ -266,7 +288,31 @@
                 <li>Presupuesto y análisis financiero</li>
                 <li>Asesoría completa</li>
               </ul>
-              <a href="#" class="btn-buy">Solicita evaluación gratuita</a>
+              <a href="#" class="btn-buy" onclick="sendWhatsApp('Hola, quisiera más información sobre el Plan Empresas'); return false;">
+                Solicita evaluación gratuita
+              </a>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="pricing-tem">
+              <h3 style="color: #0d6efd;">Plan Flexible desde</h3>
+              <div class="price"><sup>$</sup>25<span> / mes</span></div>
+              <div class="icon">
+                <i class="bi bi-rocket" style="color: #0d6efd;"></i>
+              </div>
+              <ul>
+                <li>¿Tienes requerimientos especiales? Creamos un plan personalizado que se ajusta perfectamente a lo que necesitas. </li>
+                <!--
+                <li class="resaltadoVerde">Incluye:</li>
+                <li>IVA mensual o semestral</li>
+                <li>Retención en la fuente impuesto a la renta</li>
+                <li>Anexo transaccional simplificado ATS</li>
+                -->
+              </ul>
+              <a href="#" class="btn-buy" onclick="sendWhatsApp('Hola, necesito un plan a medida'); return false;">
+                Solicita evaluación gratuita
+              </a>
             </div>
           </div><!-- End Pricing Item -->
 
@@ -709,6 +755,13 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+  function sendWhatsApp(message) {
+    const phone = "593985766475"; // tu número con código país
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+  }
+</script>
 
 </body>
 

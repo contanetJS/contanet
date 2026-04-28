@@ -651,7 +651,7 @@
           </div>
 
           <div class="col-lg-6">
-            <form id="contact-form" action="https://formspree.io/f/xpqkvpza" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form id="contact-form" action="https://formspree.io/f/xpqkvpza" method="POST" class="" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -744,7 +744,6 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -764,53 +763,26 @@
 
 <script>
 const form = document.getElementById("contact-form");
-const successBox = document.getElementById("success");
+const success = document.getElementById("success");
 
-form.addEventListener("submit", async function(e) {
-  e.preventDefault(); // 👈 evita recarga y JSON en pantalla
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-  const loading = document.querySelector(".loading");
-  const error = document.querySelector(".error-message");
-  const sent = document.querySelector(".sent-message");
-
-  loading.style.display = "block";
-  error.style.display = "none";
-  sent.style.display = "none";
-
-  try {
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: new FormData(form),
-      headers: {
-        "Accept": "application/json"
-      }
-    });
-
-    const data = await response.json();
-
-    loading.style.display = "none";
-
-    if (data.ok) {
-      sent.style.display = "block";
-
-      form.reset(); // 👈 🔥 ESTO LIMPIA EL FORMULARIO
-
-      successBox.style.display = "block";
-
-      setTimeout(() => {
-        sent.style.display = "none";
-        successBox.style.display = "none";
-      }, 4000);
-
-    } else {
-      error.innerHTML = "Error al enviar el mensaje";
-      error.style.display = "block";
+  const res = await fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: {
+      "Accept": "application/json"
     }
+  });
 
-  } catch (err) {
-    loading.style.display = "none";
-    error.innerHTML = "Error de conexión";
-    error.style.display = "block";
+  const data = await res.json();
+
+  if (data.ok) {
+    if (success) success.style.display = "block";
+    form.reset();
+  } else {
+    console.error(data);
   }
 });
 </script>

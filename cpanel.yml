@@ -1,0 +1,7 @@
+deployment:
+  tasks:
+    - export SRCPATH=/home/contanet/repositories/contanet/
+    - export DEPLOYPATH=/home/contanet/public_html/
+    - /usr/bin/git -C $SRCPATH pull origin main
+    - /usr/bin/rsync -av --delete --exclude=".git" --exclude="cpanel.yml" $SRCPATH $DEPLOYPATH
+    - echo "Deploy OK"

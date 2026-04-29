@@ -2,5 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/contanet/public_html/
-    - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp style.css $DEPLOYPATH
+    - export SRCPATH=/home/contanet/repositories/pagina/
+    - /bin/rsync -av --delete --exclude=".git" --exclude=".cpanel.yml" $SRCPATH $DEPLOYPATH

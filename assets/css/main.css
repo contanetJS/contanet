@@ -2957,3 +2957,197 @@ box-sizing: border-box;
     padding: 11px;
   }
 }
+
+/* Footer */
+
+:root {
+  --green: #2BAF45;
+  --green-soft: #eaf7ee;
+  --radius: 14px;
+}
+
+/* CARDS MODERNAS */
+.modern-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s;
+  height: 100%;
+}
+
+.modern-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ICONOS */
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  background: var(--green-soft);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green);
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.icon-circle.big {
+  width: 55px;
+  height: 55px;
+  font-size: 22px;
+}
+
+/* FORM BOX */
+.contact-form-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+/* INPUTS */
+.modern-input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+  transition: 0.3s;
+}
+
+.modern-input:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 2px rgba(43,175,69,0.1);
+}
+
+/*
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 24px;
+    background-color: #4CAF50;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 18px rgba(76, 175, 80, 0.25);
+}
+
+.btn-whatsapp i {
+    font-size: 22px;
+}
+
+.btn-whatsapp:hover {
+    background-color: #43a047;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.35);
+}
+
+.btn-whatsapp:active {
+    transform: translateY(0);
+}
+*/
+/* BOTON */
+.btn-modern {
+  background: linear-gradient(135deg, #2BAF45, var(--heading-color_sec));
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  transition: 0.3s;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(76, 175, 80, 0.25);
+}
+
+.btn-modern:hover {
+    background-color: #43a047;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.35);
+}
+
+button:hover {
+  color: color-mix(in srgb, #0F2D5C, transparent 25%);
+  text-decoration: none;
+}
+
+.btn-modern:active {
+    transform: translateY(0);
+}
+/* Logo icono */
+.logo i {
+  color: var(--primary);
+  margin-right: 8px;
+}
+
+.footer-contanet {
+  background: linear-gradient(135deg, #0b1f3a, #0d2d52);
+  color: #cfd8dc;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Texto */
+.footer-contanet h4,
+.footer-contanet h5 {
+  color: #ffffff;
+}
+
+.footer-contanet p {
+  color: #b0bec5;
+}
+
+/* Línea verde decorativa */
+.footer-contanet h4::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--heading-color_sec);
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+/* Iconos sociales */
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  margin-right: 10px;
+  color: var(--heading-color_sec);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  background: var(--heading-color_sec);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(43, 182, 115, 0.4);
+}
+
+/* Línea inferior */
+.footer-contanet .border-top {
+  border-color: rgba(255,255,255,0.1) !important;
+}
+
+/* Efecto fondo gráfico sutil */
+.footer-contanet::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(43,182,115,0.15) 0%, transparent 70%);
+}

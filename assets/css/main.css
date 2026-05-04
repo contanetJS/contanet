@@ -75,13 +75,14 @@
     justify-content: center;
     gap: 10px;
     padding: 14px 24px;
-    background-color: #4CAF50;
+    /*background-color: #4CAF50;*/
+    background: linear-gradient(135deg, #4CAF50, #43A047); 
     color: #ffffff;
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
     border-radius: 12px;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
     box-shadow: 0 6px 18px rgba(76, 175, 80, 0.25);
 }
 
@@ -90,9 +91,10 @@
 }
 
 .btn-whatsapp:hover {
+    transform: translateY(-2px);
     background-color: #43a047;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.35);
+    box-shadow: 0 10px 25px rgba(76, 175, 80, 0.35);
 }
 
 .btn-whatsapp:active {
@@ -3021,37 +3023,7 @@ box-sizing: border-box;
   box-shadow: 0 0 0 2px rgba(43,175,69,0.1);
 }
 
-/*
-.btn-whatsapp {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 14px 24px;
-    background-color: #4CAF50;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 18px rgba(76, 175, 80, 0.25);
-}
 
-.btn-whatsapp i {
-    font-size: 22px;
-}
-
-.btn-whatsapp:hover {
-    background-color: #43a047;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.35);
-}
-
-.btn-whatsapp:active {
-    transform: translateY(0);
-}
-*/
 /* BOTON */
 .btn-modern {
   background: linear-gradient(135deg, #2BAF45, var(--heading-color_sec));
@@ -3119,14 +3091,30 @@ button:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   border: 1px solid rgba(255,255,255,0.2);
   border-radius: 50%;
   margin-right: 10px;
   color: var(--heading-color_sec);
   transition: all 0.3s ease;
   text-decoration: none;
+}
+
+.social-icons i {
+  font-size: 20px;
+}
+
+/* Evita que overlays bloqueen clics */
+.footer-contanet *::before,
+.footer-contanet *::after {
+  pointer-events: none;
+}
+
+/* Asegura prioridad de los iconos */
+.social-icons {
+  position: relative;
+  z-index: 5;
 }
 
 .social-icons a:hover {

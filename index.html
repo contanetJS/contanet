@@ -247,7 +247,7 @@
                 <i class="bi bi-airplane" style="color: #fd7e14;"></i>
               </div>
               <ul>
-                <li>Perfecto para contribuyentes con alto movimiento comercial</li>
+                <li>Perfecto para contribuyentes con mayor movimiento comercial</li>
                 <li class="resaltadoVerde">Incluye:</li>
                 <li>IVA mensual o semestral</li>
                 <li>Impuesto a la renta</li>
@@ -633,7 +633,7 @@ Cada obligación ha sido cumplida de manera correcta y oportuna, evitando multas
                 </div>
 
                 <div class="col-md-6 ">
-                  <input type="email" class="form-control modern-input" name="email" placeholder="E-mail" required="">
+                  <input type="email" class="form-control modern-input" name="_replyto" placeholder="E-mail" required="">
                 </div>
 
                 <div class="col-12">
@@ -643,7 +643,7 @@ Cada obligación ha sido cumplida de manera correcta y oportuna, evitando multas
                 <div class="col-12">
                   <textarea class="form-control modern-input" name="message" rows="6" placeholder="Mensaje" required=""></textarea>
                 </div>
-                
+                <input type="hidden" name="_next" value="https://www.contanet.ec/gracias.html">
                 <div class="col-12 text-center d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
                   <button type="submit" class="btn-modern">
                     Enviar mensaje <i class="bi bi-send"></i>
@@ -741,7 +741,7 @@ Cada obligación ha sido cumplida de manera correcta y oportuna, evitando multas
     window.open(url, "_blank");
   }
 </script>
-
+<!--
 <script>
 const form = document.getElementById("contact-form");
 const success = document.getElementById("success");
@@ -767,6 +767,7 @@ form.addEventListener("submit", async (e) => {
   }
 });
 </script>
+-->
 
 </body>
 

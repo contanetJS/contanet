@@ -38,6 +38,20 @@
   --nav-dropdown-hover-color: #4CAF50; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
+.card-custom {
+  border: none;
+  border-radius: 16px;
+  padding: 25px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.card-custom:hover {
+  transform: translateY(-6px);
+}
+
 .titulo-secundario {
   color: var(--heading-color_sec);
 }
@@ -325,6 +339,44 @@ h6 {
   .navmenu li:last-child a {
     padding-right: 0;
   }
+
+  /* Estado activo */
+#navmenu ul li a {
+  position: relative;
+  padding: 6px 8px; /* menos padding */
+  color: #0F2D5C;
+  transition: all 0.25s ease;
+}
+
+/* Línea oculta por defecto */
+#navmenu ul li a::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  bottom: -4px;
+  height: 2px;
+  background: #4CAF50;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+}
+
+/* Activo */
+#navmenu ul li a.active {
+  color: #4CAF50;
+}
+
+/* Mostrar línea */
+#navmenu ul li a.active::after {
+  transform: scaleX(1);
+}
+
+/* Hover suave */
+#navmenu ul li a:hover {
+  color: #2E7D73;
+}
+ 
 
   .navmenu li:hover>a,
   .navmenu .active,
@@ -1212,6 +1264,12 @@ box-sizing: border-box;
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
+.services {
+  background-color: #f8fafc;
+  background-image: radial-gradient(#dfe6e9 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
 .services .service-item {
   background-color: var(--surface-color);
   box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
@@ -1268,6 +1326,7 @@ box-sizing: border-box;
 
 .services .service-item.item-azul:hover {
   background: #0F2D5C;
+  transform: translateY(-6px);
 }
 
 .services .service-item.item-cyan {
@@ -1285,6 +1344,7 @@ box-sizing: border-box;
 
 .services .service-item.item-cyan:hover {
   background: #0dcaf0;
+  transform: translateY(-6px);
 }
 
 .services .service-item.item-orange {
@@ -1302,6 +1362,7 @@ box-sizing: border-box;
 
 .services .service-item.item-orange:hover {
   background: #fd7e14;
+  transform: translateY(-6px);
 }
 
 .services .service-item.item-teal {
@@ -1319,6 +1380,7 @@ box-sizing: border-box;
 
 .services .service-item.item-teal:hover {
   background: #20c997;
+  transform: translateY(-6px);
 }
 
 .services .service-item.item-red {
@@ -1336,6 +1398,7 @@ box-sizing: border-box;
 
 .services .service-item.item-red:hover {
   background: #df1529;
+  transform: translateY(-6px);
 }
 
 .services .service-item.item-indigo {
@@ -1353,6 +1416,7 @@ box-sizing: border-box;
 
 .services .service-item.item-indigo:hover {
   background: #6610f2;
+  transform: translateY(-6px);
 }
 
 .services .service-item.item-pink {
@@ -1473,6 +1537,8 @@ box-sizing: border-box;
 .pricing .btn-buy:hover {
   background: var(--accent-color);
   color: var(--contrast-color);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(76, 175, 80, 0.3);
 }
 
 .pricing .featured {
@@ -1680,6 +1746,12 @@ box-sizing: border-box;
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
+.testimonials {
+  background-color: #f8fafc;
+  background-image: radial-gradient(#dfe6e9 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
 .testimonials .testimonial-item {
   background-color: var(--surface-color);
   box-shadow: 0px 0 20px rgba(0, 0, 0, 0.1);
@@ -2984,8 +3056,11 @@ box-sizing: border-box;
 
 /* ICONOS */
 .icon-circle {
+  flex-shrink: 0;
   width: 50px;
   height: 50px;
+  min-width: 50px;
+  min-height: 50px;
   background: var(--green-soft);
   border-radius: 50%;
   display: flex;
@@ -2999,6 +3074,8 @@ box-sizing: border-box;
 .icon-circle.big {
   width: 55px;
   height: 55px;
+  min-width: 55px;
+  min-height: 55px;
   font-size: 22px;
 }
 
